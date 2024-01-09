@@ -5,6 +5,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Shop from "./components/Shop/Shop";
 import Home from "./components/Home/Home";
+import Orders from "./components/Orders/Orders";
+import Inventory from "./components/Inventory/Inventory.";
+import Login from "./components/Loogin/Login";
+
+
 
 const router = createBrowserRouter([
   {
@@ -16,7 +21,16 @@ const router = createBrowserRouter([
         element: <Shop></Shop>,
       },
       {
-        
+        path : "/orders",
+        element : <Orders />
+      },
+      {
+        path : "inventory",
+        element : <Inventory />
+      },
+      {
+        path : "/login",
+        element : <Login />
       }
     ],
   },
