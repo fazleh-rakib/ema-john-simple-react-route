@@ -8,8 +8,7 @@ import Home from "./components/Home/Home";
 import Orders from "./components/Orders/Orders";
 import Inventory from "./components/Inventory/Inventory.";
 import Login from "./components/Loogin/Login";
-
-
+import cartProductLoader from "./CartProductLoader/CartProductsLoaader";
 
 const router = createBrowserRouter([
   {
@@ -17,21 +16,22 @@ const router = createBrowserRouter([
     element: <Home />,
     children: [
       {
-        path: "/",
+        path: "Shop",
         element: <Shop></Shop>,
       },
       {
-        path : "/orders",
-        element : <Orders />
+        path: "/orders",
+        element: <Orders />,
+        loader: cartProductLoader
       },
       {
-        path : "inventory",
-        element : <Inventory />
+        path: "inventory",
+        element: <Inventory />,
       },
       {
-        path : "/login",
-        element : <Login />
-      }
+        path: "/login",
+        element: <Login />,
+      },
     ],
   },
 ]);
